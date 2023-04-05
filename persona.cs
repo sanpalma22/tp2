@@ -8,11 +8,6 @@ class Persona
     public string Email { get; set; }
     public int Edad { get; set; }
 
-    public Persona()
-    {
-
-
-    }
     public Persona(int dni = 0, string ape = "", string nom = "", DateTime fNac = new DateTime(), string email = "")
     {
         DNI = dni;
