@@ -104,8 +104,8 @@ void obtenerEstadisticas()
         float promEdad, edadSumada = 0;
         foreach (Persona item in dicGente.Values)
         {
-            if (item.MiEdad() >= 16) contVotantes++;
-            edadSumada += item.MiEdad();
+            if (item.Edad >= 16) contVotantes++;
+            edadSumada += item.Edad;
         }
         promEdad = edadSumada / dicGente.Count;
         Math.Round(promEdad, 1);
@@ -126,10 +126,10 @@ void buscarPersona()
         Console.WriteLine("DNI: " + item.DNI);
         Console.WriteLine("Nombre completo: " + item.Nombre + " " + item.Apellido);
         Console.WriteLine("Fecha de nacimiento: " + item.FechaNacimiento.ToShortDateString());
-        Console.WriteLine("Edad: " + item.MiEdad());
+        Console.WriteLine("Edad: " + item.Edad);
         Console.WriteLine("EMail: " + item.Email);
         string puedeVotar;
-        if (item.MiEdad() >= 16) puedeVotar = "SI";
+        if (item.Edad >= 16) puedeVotar = "SI";
         else puedeVotar = "NO";
         Console.WriteLine("¿Puede votar?: " + puedeVotar);
     }

@@ -15,9 +15,8 @@ class Persona
         Nombre = nom;
         FechaNacimiento = fNac;
         Email = email;
+        Edad=MiEdad();
     }
-
-
     public int MiEdad()
     {
         DateTime FechaNacimientoHoy = new DateTime(DateTime.Today.Year, FechaNacimiento.Month, FechaNacimiento.Day);
